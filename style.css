@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@1&display=swap');
+
+
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* custom prosperites */
+
+:root {
+  font-size: 16px;
+
+  --ff-menu: 'Shadows Into Light', cursive;
+  --ff-text: 'Sanchez', serif;
+
+
+  --color-main-background: #1d1d2c;
+  --color-footer: #eba63f;
+  --color-menu-buttons: #3cbcc3;
+  --color-menu-buttons-hover: #e40c2b;
+  --color-text: #438945;
+
+
+  --font-size-menu: 6rem;
+  --font-size-paragraph:2rem;
+
+}
+
+
+/* menu start mobile first */
+
+body {
+  background: var(--color-main-background);
+}
+
+#return {
+  top: 2rem;
+  right: 2rem;
+  text-align: right;
+  font-size: calc(var(--font-size-menu) / 3);
+  color: var(--color-menu-buttons);
+  font-family: var(--ff-menu);
+  display: none;
+  font-weight: bold;
+  width: min-content;
+  float: right;
+  position: fixed;
+}
+
+.links {
+height: 100%;
+text-align: center;
+font-size: var(--font-size-menu);
+font-weight: bold;
+margin-top: 10%;
+margin-bottom: 10%;
+color: var(--color-menu-buttons);
+font-family: var(--ff-menu);
+}
+
+.pictureMe {
+  border-radius: 20%;
+}
+
+#aaa {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-text);
+  font-size: calc(var(--font-size-paragraph) * 0.9);
+  cursor:pointer;
+}
+
+#gabout:after {
+  content: 'About';
+}
+
+#gwork:after {
+  content: 'Work';
+}
+
+#gcontact:after {
+  content: 'Contact';
+}
+
+
+/* menu animations & rest */
+#gabout:hover {
+  color: var(--color-menu-buttons-hover);
+  cursor:pointer;
+  animation-duration: 0.5s;
+  animation-name: abutton;
+  animation-fill-mode: forwards;
+}
+
+#gwork:hover {
+  color:var(--color-menu-buttons-hover);
+  cursor: pointer;
+  animation-duration: 0.5s;
+  animation-name: abutton;
+  animation-fill-mode: forwards;
+}
+
+#gcontact:hover {
+  color:var(--color-menu-buttons-hover);
+  cursor:pointer;
+  animation-duration: 0.5s;
+  animation-name: abutton;
+  animation-fill-mode: forwards;
+}
+
+#return:hover {
+  color:var(--color-menu-buttons-hover);
+  cursor:pointer;
+  animation-duration: 0.4s;
+  animation-name: arbutton;
+  animation-fill-mode: forwards;
+}
+
+.icons{
+  max-height: 150px;
+  max-width: auto;
+}
+
+.icons:hover {
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+
+
+
+/* all the rest */
+
+
+#about, #work, #contact  {
+  display: none;
+  color: var(--color-text);
+  font-size: calc(var(--font-size-paragraph) * 0.7);
+  margin-bottom: 15%;
+  font-family: var(--ff-text);
+}
+
+#footer {
+  position: fixed;
+  background:var(--color-footer);
+  margin-bottom: 0;
+}
+
+@keyframes abutton {
+
+  to {
+    font-size: 7.5rem;
+  }
+
+}
+
+@keyframes arbutton {
+
+  to {
+    font-size: 3rem;
+  }
+
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  #gabout:after {
+    content: 'Hello';
+  }
+  
+  #gabout:hover:after {
+    content: 'About';
+  }
+  
+
+  #gwork:after {
+    content: 'I am';
+  }
+  
+  #gwork:hover:after {
+    content: 'Work';
+  }
+
+  #gcontact:after {
+    content: 'Kris';
+  }
+  
+  #gcontact:hover:after {
+    content: 'Contact';
+  }
+  
+  #photo{
+    display: block;
+    margin-top: 10%;
+  } 
+
+  #return {
+    top: 6rem;
+    right: 20%;
+  }
+  #about, #work, #contact  {
+    font-size: var(--font-size-paragraph);
+  }
+
+  #aaa {
+    font-size: calc(var(--font-size-paragraph) * 1.2);
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  #photo{
+    display: none;
+  } 
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kris Portfolio</title>
+  </head>
+  
+    <body>
+        <main>
+
+
+        <!-- Back to menu -->
+            <div id="return" onclick="menuReturn()">
+                <p>Back</p>
+            </div>
+
+            <!-- Menu -->
+            <!-- Flex for nice justifying  -->
+            <!-- <div class="container d-flex flex-column min-vh-100 justify-content-center align-items-center"> -->
+                <div class="container justify-content-around">
+                <div class="row">
+
+                    <div class="col links">
+                        <p onclick="menuAbout()" id="gabout"></p>
+                        <p onclick="menuWork()" id="gwork"></p>
+                        <p onclick="menuContact()" id="gcontact"></p>
+                    </div>
+
+                    <div class="col" id="photo">
+                        <img src="/pictures/kris.jpg" alt="Photo of Kris" class="img-fluid text-center pictureMe">
+                    </div>
+                </div>
+            </div>   
+
+            <!-- About -->
+
+            <div class="container" id="about">
+                <p class="col-6 offset-3">
+                Hello. My name is Krzysztof, but it is much easier to pronounce Kris so let's stay with it. </p>
+                <p class="col-6 offset-3">
+                I am self-taught programmer dreaming of changing a career and starting work in IT.
+                    
+
+                </p>
+            </div>
+
+            <!-- Works -->
+
+            <div class="container" id="work">
+                <p class="col-6 offset-3">
+                    Website where you are now is my last work. Design inspiration came from the site <a id="aaa" href="https://www.dejan.works/"target="_blank" >here</a>. </p>
+                    <p class="col-6 offset-3"> I am currently working on two more websites for my friends during breaks from the course as additional challenges. I will post them here as soon as they are finished.
+                </p>
+            </div>
+
+            <!-- Contact -->
+
+        <div class="container" id="contact">
+            <p class="container">
+                
+                <a href="https://www.facebook.com/krzysztof.mazurek.3152/" target="_blank">
+                <img src="/pictures/facebook.svg" alt="image visit facebook" class="col-2 icons"></a>
+
+                <a href="https://www.linkedin.com/in/krzysztof-mazurek-29128b158/" target="_blank">
+                <img src="/pictures/linkedin.svg" alt="image visit linkedin" class="col-2 icons"></a>
+
+                <img src="/pictures/mail.svg" alt="image copy Kris email" class="col-2 icons" onclick="copyMail()">
+
+                <a href="https://github.com/Kaitaye" target="_blank">
+                <img src="/pictures/git.svg" alt="image visit Git" class="col-2 icons"></a>  
+
+            </p>
+
+
+                <p class="col-10 pt-5">
+                    If you have any other questions or would like me to clarify anything else, please, let me know. I am always glad to help in any way I can.
+                </p>
+
+        </div>
+
+
+            <div class="container-fluid">
+                <p class="col fixed-bottom" id="footer">
+                    &copy; Copyright 2021 Kaitaye
+                </p>
+            </div>
+
+        </main>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="mainScript.js"></script> 
+
+    </body>
+</html>
